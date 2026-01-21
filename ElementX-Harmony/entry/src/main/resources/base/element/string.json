@@ -1,0 +1,92 @@
+{
+  "string": [
+    {
+      "name": "module_desc",
+      "value": "Element X - Secure Matrix Messenger for HarmonyOS"
+    },
+    {
+      "name": "EntryAbility_desc",
+      "value": "Element X Main Entry"
+    },
+    {
+      "name": "EntryAbility_label",
+      "value": "Element X"
+    },
+    {
+      "name": "login_title",
+      "value": "Sign in to your account"
+    },
+    {
+      "name": "login_subtitle",
+      "value": "Enter your Matrix homeserver and credentials"
+    },
+    {
+      "name": "homeserver_url",
+      "value": "Homeserver URL"
+    },
+    {
+      "name": "username",
+      "value": "Username"
+    },
+    {
+      "name": "password",
+      "value": "Password"
+    },
+    {
+      "name": "sign_in",
+      "value": "Sign In"
+    },
+    {
+      "name": "home_title",
+      "value": "All Chats"
+    },
+    {
+      "name": "settings",
+      "value": "Settings"
+    },
+    {
+      "name": "start_chat",
+      "value": "Start Chat"
+    },
+    {
+      "name": "send_message",
+      "value": "Send a message"
+    },
+    {
+      "name": "sign_out",
+      "value": "Sign Out"
+    },
+    {
+      "name": "app_version",
+      "value": "App Version"
+    },
+    {
+      "name": "account",
+      "value": "Account"
+    },
+    {
+      "name": "security",
+      "value": "Security"
+    },
+    {
+      "name": "notifications",
+      "value": "Notifications"
+    },
+    {
+      "name": "appearance",
+      "value": "Appearance"
+    },
+    {
+      "name": "help_about",
+      "value": "Help & About"
+    },
+    {
+      "name": "empty_room_list",
+      "value": "No conversations yet"
+    },
+    {
+      "name": "empty_room_list_subtitle",
+      "value": "Start a new chat to begin messaging"
+    }
+  ]
+}
