@@ -28,15 +28,18 @@ export struct RoomCell {
         // Call indicator
         if (this.room.hasOngoingCall) {
           Column() {
-            Text('📞')
-              .fontSize(12)
+            Text('Call')
+              .fontSize(8)
+              .fontColor(Color.White)
+              .fontWeight(FontWeight.Bold)
           }
-          .width(20)
-          .height(20)
-          .borderRadius(10)
+          .width(24)
+          .height(16)
+          .borderRadius(8)
           .backgroundColor('#0DBD8B')
           .justifyContent(FlexAlign.Center)
           .alignItems(HorizontalAlign.Center)
+          .accessibilityText('Ongoing call in room')
         }
       }
       .width(48)

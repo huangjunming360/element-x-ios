@@ -135,13 +135,15 @@ struct LoginPage {
                   })
                 
                 Button() {
-                  Text(this.showPassword ? '🙈' : '👁')
-                    .fontSize(20)
+                  Text(this.showPassword ? 'Hide' : 'Show')
+                    .fontSize(12)
+                    .fontColor('#737D8C')
                 }
-                .width(40)
+                .width(48)
                 .height(40)
                 .backgroundColor(Color.Transparent)
                 .margin({ right: 4 })
+                .accessibilityText(this.showPassword ? 'Hide password' : 'Show password')
                 .onClick(() => {
                   this.showPassword = !this.showPassword;
                 })

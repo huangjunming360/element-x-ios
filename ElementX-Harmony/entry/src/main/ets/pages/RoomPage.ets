@@ -215,16 +215,18 @@ struct RoomPage {
               .height(20)
               .color(Color.White)
           } else {
-            Text('➤')
-              .fontSize(18)
+            Text('Send')
+              .fontSize(12)
+              .fontWeight(FontWeight.Medium)
               .fontColor(Color.White)
           }
         }
-        .width(40)
+        .width(48)
         .height(40)
         .borderRadius(20)
         .backgroundColor(this.messageText.trim().length > 0 ? '#0DBD8B' : '#B0E5D8')
         .enabled(this.messageText.trim().length > 0 && !this.isSending)
+        .accessibilityText('Send message')
         .onClick(() => {
           this.sendMessage();
         })

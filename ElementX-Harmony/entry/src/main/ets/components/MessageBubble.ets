@@ -64,7 +64,9 @@ export struct MessageBubble {
             if (this.isFromCurrentUser) {
               Text(this.getSendStatusIcon())
                 .fontSize(12)
+                .fontColor(this.isFromCurrentUser ? '#FFFFFF99' : '#8D97A5')
                 .margin({ left: 4 })
+                .accessibilityText(this.getSendStatusDescription())
             }
           }
           .width('100%')
@@ -167,16 +169,32 @@ export struct MessageBubble {
   }
 
   /**
-   * Get send status icon
+   * Get send status text for accessibility
    */
   getSendStatusIcon(): string {
     switch (this.event.sendState) {
       case SendState.SENDING:
-        return '⏳';
+        return '...';
       case SendState.SENT:
         return '✓';
       case SendState.FAILED:
-        return '⚠️';
+        return '!';
+      default:
+        return '';
+    }
+  }
+
+  /**
+   * Get send status description for accessibility
+   */
+  getSendStatusDescription(): string {
+    switch (this.event.sendState) {
+      case SendState.SENDING:
+        return 'Message sending';
+      case SendState.SENT:
+        return 'Message sent';
+      case SendState.FAILED:
+        return 'Message failed to send';
       default:
         return '';
     }

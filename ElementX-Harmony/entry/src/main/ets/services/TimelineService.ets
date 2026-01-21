@@ -12,6 +12,7 @@ import {
   TextMessageContent, 
   SendState 
 } from '../models/TimelineModels';
+import { generateLocalId } from '../utils/Utils';
 
 const DOMAIN = 0x0000;
 const TAG = 'TimelineService';
@@ -87,8 +88,8 @@ export class TimelineService {
     hilog.info(DOMAIN, TAG, `Sending message to room: ${roomId}`);
 
     try {
-      // Create local echo
-      const localEchoId = `local_${Date.now()}_${Math.random()}`;
+      // Create local echo with robust ID generation
+      const localEchoId = generateLocalId();
       const content: TextMessageContent = {
         type: 'text',
         body: text
